@@ -1,22 +1,23 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import "./globals.css";
+import type { Metadata } from "next";
+import Logo from "../../public/Logo.png";
 
 export const metadata: Metadata = {
-  title: 'Chat Bot ',
-  description: '',
-}
+  title: "Chat Bot",
+  description: "",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="icon" href={Logo.src} />
+      </head>
+      <body className="font-syne">{children}</body>
     </html>
-  )
+  );
 }
