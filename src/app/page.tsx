@@ -1,4 +1,5 @@
 import Chat from "@/components/Chat";
+import "@n8n/chat"
 
 export default function Home() {
   return (
